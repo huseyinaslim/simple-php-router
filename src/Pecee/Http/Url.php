@@ -541,7 +541,7 @@ class Url implements JsonSerializable
 
     public function __toString(): string
     {
-        return $this->getHost(true) . $this->getRelativeUrl();
+        return $this->getRelativeUrl();
     }
 
 }
