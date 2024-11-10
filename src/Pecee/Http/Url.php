@@ -75,8 +75,8 @@ class Url implements JsonSerializable
         if ($url !== null) {
             $data = $this->parseUrl($url);
 
-            $this->scheme = $data['scheme'] ?? null;
-            $this->host = $data['host'] ?? null;
+            $this->scheme = $data['scheme'] ?? $this->scheme;
+            $this->host = $data['host'] ?? $this->host;
             $this->port = $data['port'] ?? null;
             $this->username = $data['user'] ?? null;
             $this->password = $data['pass'] ?? null;
