@@ -117,7 +117,7 @@ abstract class Route implements IRoute
         return $router->getClassLoader()->loadClassMethod($class, $method, $parameters);
     }
 
-    protected function parseParameters($route, $url, Request $request, $parameterRegex = null): ?array
+    protected function parseParameters(string $route, string $url, Request $request, ?string $parameterRegex = null): ?array
     {
         $regex = (strpos($route, $this->paramModifiers[0]) === false) ? null :
             sprintf

@@ -51,7 +51,7 @@ function request(): Request
  * @param array ...$methods Default methods
  * @return \Pecee\Http\Input\InputHandler|array|string|null
  */
-function input($index = null, $defaultValue = null, ...$methods)
+function input(?string $index = null, mixed $defaultValue = null, ...$methods)
 {
     if ($index !== null) {
         return request()->getInputHandler()->value($index, $defaultValue, ...$methods);

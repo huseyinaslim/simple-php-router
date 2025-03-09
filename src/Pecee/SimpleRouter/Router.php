@@ -657,12 +657,12 @@ class Router
      * If no arguments is specified, it will return the url for the current loaded route.
      *
      * @param string|null $name
-     * @param string|array|null $parameters
+     * @param mixed $parameters
      * @param array|null $getParams
      * @return Url
      * @throws InvalidArgumentException
      */
-    public function getUrl(?string $name = null, $parameters = null, ?array $getParams = null): Url
+    public function getUrl(?string $name = null, mixed $parameters = null, ?array $getParams = null): Url
     {
         $this->debug('Finding url', func_get_args());
 

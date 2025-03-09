@@ -27,7 +27,7 @@
     }
   ],
   "require": {
-    "php": ">=7.4",
+    "php": ">=7.4|^8.0",
     "ext-json": "*"
   },
   "require-dev": {
@@ -36,7 +36,8 @@
     "phpstan/phpstan": "^1",
     "phpstan/phpstan-phpunit": "^1",
     "phpstan/phpstan-deprecation-rules": "^1",
-    "phpstan/phpstan-strict-rules": "^1"
+    "phpstan/phpstan-strict-rules": "^1",
+    "maglnet/composer-require-checker": "^4.16"
   },
   "scripts": {
     "test": [

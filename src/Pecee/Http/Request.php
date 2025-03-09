@@ -301,7 +301,7 @@ class Request
      * @param mixed|null $defaultValue
      * @return mixed|null
      */
-    public function getFirstHeader(array $headers, $defaultValue = null)
+    public function getFirstHeader(array $headers, mixed $defaultValue = null)
     {
         foreach ($headers as $header) {
             $header = $this->getHeader($header);
@@ -551,7 +551,7 @@ class Request
         return array_key_exists($name, $this->data) === true;
     }
 
-    public function __set($name, $value = null)
+    public function __set(string $name, mixed $value = null)
     {
         $this->data[$name] = $value;
     }

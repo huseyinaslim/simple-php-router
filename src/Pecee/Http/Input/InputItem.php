@@ -20,7 +20,7 @@ class InputItem implements ArrayAccess, IInputItem, IteratorAggregate
      * @param string $index
      * @param mixed $value
      */
-    public function __construct(string $index, $value = null)
+    public function __construct(string $index, mixed $value = null)
     {
         $this->index = $index;
         $this->value = $value;
@@ -77,7 +77,7 @@ class InputItem implements ArrayAccess, IInputItem, IteratorAggregate
      * @param mixed $value
      * @return static
      */
-    public function setValue($value): IInputItem
+    public function setValue(mixed $value): IInputItem
     {
         $this->value = $value;
 

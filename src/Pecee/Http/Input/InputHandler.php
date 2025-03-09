@@ -274,11 +274,11 @@ class InputHandler
      * Get input element value matching index
      *
      * @param string $index
-     * @param string|mixed|null $defaultValue
+     * @param mixed $defaultValue
      * @param array ...$methods
      * @return string|array
      */
-    public function value(string $index, $defaultValue = null, ...$methods)
+    public function value(string $index, mixed $defaultValue = null, ...$methods)
     {
         $input = $this->find($index, ...$methods);
 
@@ -324,10 +324,10 @@ class InputHandler
      * Find post-value by index or return default value.
      *
      * @param string $index
-     * @param mixed|null $defaultValue
+     * @param mixed $defaultValue
      * @return InputItem|array|string|null
      */
-    public function post(string $index, $defaultValue = null)
+    public function post(string $index, mixed $defaultValue = null)
     {
         return $this->post[$index] ?? $defaultValue;
     }
@@ -336,10 +336,10 @@ class InputHandler
      * Find file by index or return default value.
      *
      * @param string $index
-     * @param mixed|null $defaultValue
+     * @param mixed $defaultValue
      * @return InputFile|array|string|null
      */
-    public function file(string $index, $defaultValue = null)
+    public function file(string $index, mixed $defaultValue = null)
     {
         return $this->file[$index] ?? $defaultValue;
     }
@@ -348,10 +348,10 @@ class InputHandler
      * Find parameter/query-string by index or return default value.
      *
      * @param string $index
-     * @param mixed|null $defaultValue
+     * @param mixed $defaultValue
      * @return InputItem|array|string|null
      */
-    public function get(string $index, $defaultValue = null)
+    public function get(string $index, mixed $defaultValue = null)
     {
         return $this->get[$index] ?? $defaultValue;
     }
